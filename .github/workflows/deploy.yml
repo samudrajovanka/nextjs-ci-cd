@@ -62,7 +62,7 @@ jobs:
           vercel-args: '--prod'
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          alias-domain: github-action-next-dev.vercel.app
+          alias-domains: github-action-next-dev.vercel.app
   # --- deploy production ---------------
   deploy_production:
     if: |
