@@ -23,4 +23,4 @@ jobs:
     needs: prepare
     steps:
       - name: Running Test Lint
-        run: CI=true yarn lint
+        run:  yarn lint
