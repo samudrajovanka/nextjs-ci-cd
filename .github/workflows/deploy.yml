@@ -17,8 +17,9 @@ jobs:
       - name: Installing depedencies
         run: yarn install
 
-  test:lint:
+  # --- check lint ---------------
+  lint:
     runs-on: ubuntu-latest
     needs: prepare
-    - name: Running Test
-      run: CI=true yarn test
+    - name: Running Test Lint
+      run: CI=true yarn lint
