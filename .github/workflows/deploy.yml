@@ -23,5 +23,6 @@ jobs:
     needs: prepare
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
       - name: Running Test Lint
         run: yarn lint
