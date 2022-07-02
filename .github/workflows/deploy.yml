@@ -1,5 +1,10 @@
 name: "Deploy to Vercel"
 
+on:
+  push:
+    branches:
+    tags:
+
 jobs:
   # --- install depedencies ---------------
   prepare:
