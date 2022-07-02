@@ -18,3 +18,16 @@ jobs:
         run: yarn install
       - name: Running test lint
         run: yarn lint
+  # --- build ---------------
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+      - name: Installing depedencies
+        run: yarn install
+      - name: Try to build
+        run: yarn build
+  
