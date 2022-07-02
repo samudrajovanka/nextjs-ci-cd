@@ -43,8 +43,9 @@ jobs:
   deploy:development:
     name: deploy
     if: github.event_name != 'pull_request'
-      run: echo "::set-env name=BRANCH_NAME::$(echo ${GITHUB_REF#refs/heads/})"
-      id: extract_branch
+    shell: bash
+    run: echo "::set-env name=BRANCH_NAME::$(echo ${GITHUB_REF#refs/heads/})"
+    id: extract_branch
     if: ${{ BRANCH_NAME == 'main' }}
     runs-on: ubuntu-latest
     needs: [lint, build]
