@@ -22,5 +22,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: prepare
     steps:
+      - uses: actions/checkout@v2
       - name: Running Test Lint
-        run:  yarn lint
+        run: yarn lint
