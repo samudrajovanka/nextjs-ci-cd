@@ -1,20 +1,15 @@
 name: "Deploy to Vercel"
 
-stages:
-  - prepare
-  - test
-  - build
-  - deploy
+jobs:
+  # --- install depedencies ---------------
+  prepare:
+    runs-on: ubuntu-latest
+    name: "Installing depedencies"
 
-# --- install depedencies ---------------
-install:
-  stage: prepare
-  runs-on: ubuntu-latest
-  name: "Installing depedencies"
-
-  steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
-    with:
-      node-version: 14
-    run: yarn install
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      with:
+        node-version: 14
+      run: yarn install
+      
