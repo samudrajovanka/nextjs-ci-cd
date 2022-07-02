@@ -16,8 +16,6 @@ jobs:
           node-version: 14
       - name: Installing depedencies
         run: yarn install
-
-  # --- check lint ---------------
   lint:
     runs-on: ubuntu-latest
     needs: prepare
